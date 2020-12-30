@@ -4,7 +4,7 @@ using namespace std;
  
 void removeGreatestTwo(vector<int> arr) {
  vector<int> ans;
- priority_queue <int, vector<int>, less<int> > heap;  //priority heap is created such that the greatest number is removed when pop() is called
+ priority_queue <int, vector<int>, less<int> > heap;  
   for (int i = 0; i < (int) arr.size(); ++i) {
     heap.push(arr[i]);
   }
@@ -27,6 +27,9 @@ void removeGreatestTwo(vector<int> arr) {
 int main() {
     int n;
     int k;
+    cout<<"Enter the number of test cases: "<<endl;
+    cin>>n;
+    while(n--){
     cout<<"Enter the number of elements: "<<endl;
     cin >> k;
     vector<int> arr;
@@ -37,6 +40,6 @@ int main() {
       arr.push_back(ele);
     }   
     removeGreatestTwo(arr);  
-  
+  }
   return 0;
 }
